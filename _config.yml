@@ -1,16 +1,29 @@
 
-# html lang
-language: zh-Hans
-
-# main menu navigation
 menu:
   home: /
-  archives: /archives
-  tags: /tags
-  #categories: /categories
-  search: /search
-  about: https://0xff000000.com
-  rss: /atom.xml
+  archives: /archives/
+  categories: /categories/ 
+  tags: /tags/
+  search: /search/
+  about: /about/
+  #schedule: /schedule/
+  
+  #home: / || home
+  #about: /about/ || user
+  #tags: /tags/ || tags
+  #categories: /categories/ || th
+  #archives: /archives/ || archive
+  #schedule: /schedule/ || calendar
+  #sitemap: /sitemap.xml || sitemap
+  #commonweal: /404/ || heartbeat
+local_search:
+    enable: true
+search:
+  path: search.xml
+  field: post
+  
+# html lang
+language: zh-Hans
 
 # Miscelaneous
 favicon: /logo.png
@@ -23,13 +36,14 @@ stylesheets:
 
 # scripts loaded in the end of the body
 scripts:
-#- //cdn.bootcss.com/zepto/1.2.0/zepto.min.js
-#- /js/xoxo.js
+- //cdn.bootcss.com/zepto/1.2.0/zepto.min.js
+- /js/xoxo.js
 
 # switch
 show_excerpt: true
 show_date: true
+
 #footer
-index_page: https://blog.0xff000000.com
-main_site: https://0xff000000.com
-github: https://github.com/KevinOfNeu
+index_page: https://geedchin.com
+main_site: https://geedchin.com
+github: https://github.com/geedchin

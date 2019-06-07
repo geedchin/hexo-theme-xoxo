@@ -6,6 +6,7 @@ if (is_category()) pageTitle = 'category: ' + page.category;
 if (is_month()) pageTitle += ': ' + page.month + '/' + page.year;
 if (is_year()) pageTitle += ': ' + page.year;
 pageTitle += ' [ ' + config.title + ' ]';
+config.subtitle = config.subtitle||''
 if (is_home()) pageTitle+= config.subtitle;
 %>
 
@@ -25,7 +26,13 @@ if (is_home()) pageTitle+= config.subtitle;
   <% if (config.description) { %>
     <meta name="description" content="<%= config.description %>" />
   <% } else {  %>
-    <meta name="description" content="<%= page.description || page.title || (config.title + ',' + config.subtitle) %>" />
+  <% 
+    tmp = ''
+    if (config.subtitle!=''&&config.subtitle!=null){
+        tmp = ","+config.subtitle
+    }
+  %>
+    <meta name="description" content="<%= page.description || page.title || (config.title + tmp) %>" />
   <% } %>
   
   <link rel="icon" type="image/x-icon" href="/logo.png">
