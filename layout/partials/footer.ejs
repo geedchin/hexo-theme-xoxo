@@ -6,4 +6,20 @@
         <a class="bottom-item" href="https://hexo.io" target="_blank">Powered by hexo</a> |
         <a class="bottom-item" href="https://github.com/KevinOfNeu/hexo-theme-xoxo" target="_blank">Theme xoxo</a>
     </div>
+    <% if (theme.mermaid.enable) { %>
+<!--
+
+<script src='https://unpkg.com/mermaid@<%= theme.mermaid.version %>/dist/mermaid.min.js'></script>
+<script src='/resources/lib/js/mermaid@7.1.2.min.js'></script>
+
+-->
+    
+	  <script src='https://unpkg.com/mermaid@<%= theme.mermaid.version %>/dist/mermaid.min.js'></script>
+      
+	  <script>
+	    if (window.mermaid) {
+	      mermaid.initialize({theme: 'forest'});
+	    }
+	  </script>
+	<% } %>
 </footer>
